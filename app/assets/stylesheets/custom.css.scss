@@ -140,10 +140,30 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
-  @include box_sizing;
+  @include box_sizing(border-box);
 }
 
 input {
   height: auto !important;
 }
 
+.dateselect {
+  white-space: nowrap;
+}
+
+.year {
+  width: 33%;
+}
+
+.month {
+  width: 33%;
+}
+
+.day {
+  width: 33%;
+}
+
+.btn-primary {
+  background-color: #722C2C;
+  border-color: #752F2F;
+}

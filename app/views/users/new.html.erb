@@ -20,7 +20,9 @@
       <%= f.text_field :mobile_number %>
 
       <%= f.label :birth_date, "Fecha de Nacimiento" %>
-      <%= f.date_select :birth_date %>
+      <div class="dateselect">
+      	<%= f.date_select :birth_date, start_year: 100.years.ago.year, end_year: 18.years.ago.year, order: [:day, :month, :year], default: 18.years.ago, with_css_classes: true %>
+      </div>
 
       <%= f.label :last_name, "Profesión" %>
       <%= f.text_field :last_name %>
