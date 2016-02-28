@@ -1,1 +1,2 @@
-# Proyecto para la Secretaria de Educacion - Gobernacion del Magdalena
+# Proyecto para la Secretaria de Educacion
+# Gobernacion del Magdalena
