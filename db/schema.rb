@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20160215190610) do
     t.integer  "numero_celular",   limit: 8
     t.string   "profesion",      limit: 150
     t.string   "municipio",    limit: 150
-    t.date     "fecha_nacimiento",
+    t.date     "fecha_nacimiento"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.string   "password_digest", limit: 255
