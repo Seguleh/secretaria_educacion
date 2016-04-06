@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20160215190610) do
     t.string   "nombre",      limit: 50
     t.string   "apellido",       limit: 50
     t.string   "email",           limit: 150
-    t.integer  "numero_fijo",    limit: 4
-    t.integer  "numero_celular",   limit: 4
+    t.integer  "numero_fijo",    limit: 12
+    t.integer  "numero_celular",   limit: 12
     t.string   "profesion",      limit: 150
     t.string   "municipio",    limit: 150
     t.date     "fecha_nacimiento"

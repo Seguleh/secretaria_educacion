@@ -4,8 +4,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :nombre
       t.string :apellido
       t.string :email
-      t.integer :numero_fijo, :limit => 12
-      t.integer :numero_celular, :limit => 12
+      t.integer :numero_fijo
+      t.integer :numero_celular
       t.string :profesion
       t.string :municipio
       t.date :fecha_nacimiento
