@@ -16,6 +16,13 @@ development:
   username: zxgdggoxzrjuox
   password: PyNxNz_lltWPix7HMQXMuh1nyh
 
+production:
+
+  adapter: postgresql
+  encoding: utf8
+  database: de2aifpsim362l
+  username: zxgdggoxzrjuox
+  password: PyNxNz_lltWPix7HMQXMuh1nyh
   # adapter: mysql2
   # database: sec_edu_mag
   # pool: 5
