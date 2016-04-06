@@ -29,6 +29,8 @@ gem 'bootstrap-sass'
 
 gem 'jquery-ui-rails'
 
+gem 'puma'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
