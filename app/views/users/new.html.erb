@@ -4,39 +4,43 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
-      <%= f.label :first_name, "Nombre" %>
-      <%= f.text_field :first_name %>
 
-      <%= f.label :last_name, "Apellido" %>
-      <%= f.text_field :last_name %>
+      <%= render 'shared/error_messages' %>
 
-      <%= f.label :email, "Correo electronico" %>
-      <%= f.email_field :email %>
+      <%= f.label :nombre, "Nombre" %>
+      <%= f.text_field :nombre, class: 'form-control' %>
 
-      <%= f.label :phone_number, "Numero Fijo" %>
-      <%= f.text_field :phone_number %>
+      <%= f.label :apellido, "Apellido" %>
+      <%= f.text_field :apellido, class: 'form-control' %>
 
-      <%= f.label :mobile_number, "Numero Celular" %>
-      <%= f.text_field :mobile_number %>
+      <%= f.label :email, "Correo electrónico" %>
+      <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :birth_date, "Fecha de Nacimiento" %>
+      <%= f.label :numero_fijo, "Numero Fijo" %>
+      <%= f.text_field :numero_fijo, class: 'form-control' %>
+
+      <%= f.label :numero_celular, "Numero Celular" %>
+      <%= f.text_field :numero_celular, class: 'form-control' %>
+
+      <%= f.label :fecha_nacimiento, "Fecha de Nacimiento" %>
       <div class="dateselect">
-      	<%= f.date_select :birth_date, start_year: 100.years.ago.year, end_year: 18.years.ago.year, order: [:day, :month, :year], default: 18.years.ago, with_css_classes: true %>
+      	<%= f.date_select :fecha_nacimiento, {:use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'], start_year: 100.years.ago.year, end_year: 18.years.ago.year, order: [:day, :month, :year], default: 18.years.ago, with_css_classes: true, class: 'form-control'} %>
       </div>
 
-      <%= f.label :last_name, "Profesión" %>
-      <%= f.text_field :last_name %>
+      <%= f.label :profesion, "Profesión" %>
+      <%= f.text_field :profesion, class: 'form-control' %>
 
-      <%= f.label :last_name, "Municipio" %>
-      <%= f.text_field :last_name %>
+      <%= f.label :municipio, "Municipio" %>
+      <%= f.text_field :municipio, class: 'form-control' %>
 
       <%= f.label :password, "Contraseña" %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "Confirmar contraseña" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.submit "Crear usuario", class: "btn btn-primary" %>
+
     <% end %>
   </div>
 </div>

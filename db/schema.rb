@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20160215190610) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",      limit: 50
-    t.string   "last_name",       limit: 50
+    t.string   "nombre",      limit: 50
+    t.string   "apellido",       limit: 50
     t.string   "email",           limit: 150
-    t.integer  "phone_number",    limit: 4
-    t.integer  "mobile_number",   limit: 4
-    t.string   "profession",      limit: 150
-    t.string   "municipality",    limit: 150
-    t.date     "birth_date"
+    t.integer  "numero_fijo",    limit: 4
+    t.integer  "numero_celular",   limit: 4
+    t.string   "profesion",      limit: 150
+    t.string   "municipio",    limit: 150
+    t.date     "fecha_nacimiento"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.string   "password_digest", limit: 255
