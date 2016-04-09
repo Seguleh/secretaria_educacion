@@ -1,1 +1,16 @@
 <h1>En Progreso</h1>
+
+<div class="row">
+
+<div class="col-md-6 col-md-offset-3">
+
+	<span class="text-left">Database users:</span>
+
+	<div class="box-it">
+		<% @datab.each do |user| %>
+			<h2><%= user.nombre+" "+user.apellido %></h2>
+		<% end %>
+	</div>
+</div>
+
+</div>
