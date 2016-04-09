@@ -8,7 +8,7 @@
 
 	<div class="box-it">
 		<% @datab.each do |user| %>
-			<h2><%= user.nombre+" "+user.apellido %></h2>
+			<h2><%= user.nombre+" "+user.apellido+" ("+user.profesion+")"%></h2>
 		<% end %>
 	</div>
 </div>
