@@ -1,10 +1,27 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Secretaria de Educacion", root_path, id: "logo" %>
+    <%= link_to "Secretaria de Educacion", root_url, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Inicio",   root_path %></li>
-        <li><%= link_to "Iniciar Sesión?", signup_path %></li>
+        <li><%= link_to "Inicio",   root_url %></li>
+        <% if logged_in? %>
+        	<li><%= link_to "Registrar Usuario", signup_path %></li>
+        	<li><%= link_to "Modificar Usuario", edit_path %></li>
+        	<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= @current_user.apellido+", "+@current_user.nombre %> <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Perfil", current_user %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Cerrar Sessión", logout_path, method: "delete" %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+        	<li><%= link_to "Iniciar Sesión", login_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>

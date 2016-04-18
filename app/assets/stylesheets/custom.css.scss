@@ -185,6 +185,16 @@ input {
   border-color: #752F2F;
 }
 
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #5F2525;
+  border-color: #532222;
+}
+
+.btn-primary:active:hover, .btn-primary:active:focus {
+  background-color: #4D1D1D;
+  border-color: #411A1A;
+}
+
 #error_explanation {
   color: red;
   ul {
@@ -198,4 +208,18 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }

@@ -1,4 +1,7 @@
 <h1>En Progreso</h1>
+<% if @current_user %>
+	<h2><%= "Bienvenido "+@current_user.nombre+" "+@current_user.apellido %></h2>
+<% end %>
 
 <div class="row">
 
