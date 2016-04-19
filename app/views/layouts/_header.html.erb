@@ -5,7 +5,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Inicio",   root_url %></li>
         <% if logged_in? %>
-        	<% if current_user.admin? && !current_user?(user) %>
+        	<% if current_user.admin? && !current_user?(session[:user_id]) %>
 	        	<li><%= link_to "Registrar Usuario", signup_path %></li>
 	        	<li><%= link_to "Usuarios", users_path %></li>
         	<% end %>

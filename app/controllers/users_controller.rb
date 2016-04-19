@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :logged_in_user, only: [:edit, :update, :destroy, :create, :index]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :create, :show]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: [:destroy, :create, :index, :show]
 
@@ -44,16 +44,18 @@ class UsersController < ApplicationController
   def edit
 
     @user = User.find(params[:id])
+  end
 
+  def update
+
+    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
 
       flash[:success] = "Modificación exitosa!"
-      redirect_to root_url
-
+      redirect_to @user
     else
 
       render 'edit'
-
     end
   end
 
@@ -93,7 +95,6 @@ class UsersController < ApplicationController
     def admin_user
 
       redirect_to(root_url) unless current_user.admin?
-
     end
 
 end
