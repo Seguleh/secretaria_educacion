@@ -28,7 +28,7 @@ production:
   encoding: utf8
   database: d15g70g26opoda
   username: tqoeawghdybacn
-  password: HR6Q6aQVGzmmx_IAdmGJTCcD1k
+  password: HR6Q6aQVGzmmx_IAdmGJTCcD1k 
 
 #  password: clav3s3rv1d0r123
 #  socket: /tmp/mysql.sock
