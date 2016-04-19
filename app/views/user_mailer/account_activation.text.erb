@@ -1,0 +1,5 @@
+Hola <%= @user.nombre+" "+@user.apellido %>
+
+Bienvenido a la aplicacion web de la Secretaria de Educacion. Favor activar su cuenta en el siguiente enlace:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

@@ -10,15 +10,23 @@ class SessionsController < ApplicationController
 
   	if user && user.authenticate(params[:session][:password])
 
-  		log_in user
-  		params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-  		redirect_to root_path
+      if user.activated?
+
+    		log_in user
+    		params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+    		redirect_back_or user
+      else
+
+        message = "La cuenta no está activada."
+        message += "Busca el enlace de activación en tu correo"
+        flash[:warning] = message
+        redirect_to root_url
+      end
   		
   	else
 
   		flash.now[:danger] = "Información de usuario incorrecta"
   		render 'new'  	
-
   	end
 
   end
@@ -27,7 +35,6 @@ class SessionsController < ApplicationController
 
   	log_out if logged_in?
   	redirect_to root_url
-
   end
 
 end

@@ -1,0 +1,39 @@
+<%= form_for(@user) do |f| %>
+
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :nombre, "Nombre" %>
+      <%= f.text_field :nombre, class: 'form-control' %>
+
+      <%= f.label :apellido, "Apellido" %>
+      <%= f.text_field :apellido, class: 'form-control' %>
+
+      <%= f.label :email, "Correo electrónico" %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :numero_fijo, "Numero Fijo" %>
+      <%= f.text_field :numero_fijo, class: 'form-control' %>
+
+      <%= f.label :numero_celular, "Numero Celular" %>
+      <%= f.text_field :numero_celular, class: 'form-control' %>
+
+      <%= f.label :fecha_nacimiento, "Fecha de Nacimiento" %>
+      <div class="dateselect">
+        <%= f.date_select :fecha_nacimiento, {:use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'], start_year: 100.years.ago.year, end_year: 18.years.ago.year, order: [:day, :month, :year], default: 18.years.ago, with_css_classes: true, class: 'form-control'} %>
+      </div>
+
+      <%= f.label :profesion, "Profesión" %>
+      <%= f.text_field :profesion, class: 'form-control' %>
+
+      <%= f.label :municipio, "Municipio" %>
+      <%= f.text_field :municipio, class: 'form-control' %>
+
+      <%= f.label :password, "Contraseña" %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmar contraseña" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+
+<% end %>

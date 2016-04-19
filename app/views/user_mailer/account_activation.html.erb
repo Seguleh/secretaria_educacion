@@ -1,0 +1,9 @@
+<h1>Secretaria de Educacion - Magdalena</h1>
+
+<p>Hola <%= @user.nombre+" "+@user.apellido %>,</p>
+
+<p>
+Bienvenido a la aplicacion web de la Secretaria de Educacion. Favor activar su cuenta en el siguiente enlace:
+</p>
+
+<%= link_to "Activar", edit_account_activation_url(@user.activation_token, email: @user.email) %>

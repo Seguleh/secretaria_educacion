@@ -41,4 +41,15 @@ Rails.application.configure do
 
   config.web_console.whitelisted_ips = '10.0.2.2'
 
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandbox62becddca0bb482e96327ae3168d6961.mailgun.org",
+    :user_name => "postmaster@sandbox62becddca0bb482e96327ae3168d6961.mailgun.org",
+    :password => "0da46e963fadcfaba9ecfe1cfadba994"
+  }
+
 end
