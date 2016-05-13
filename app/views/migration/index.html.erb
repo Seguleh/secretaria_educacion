@@ -1,0 +1,37 @@
+<% provide(:title, "Migración de Datos") %>
+
+<fieldset>
+  <legend>Instrucciones</legend>
+  <p>La migración de datos consiste en el ingreso de los datos de personal en la base de datos utilizada por el sistema. Es de suma importancia que utilice el archivo descargado y no copias con cambios en el nombre o configuraciones dentro del mismo.</p>
+  <br />
+  <b>Pasos para migrar:</b>
+  <br />
+  <p>1. Hacer clic en el botón de "Archivo modelo" para descargar el archivo.</p>
+  <p>2. Leer las instrucciones dentro del archivo modelo con respecto a los formatos de los datos.</p>
+  <p>3. Ingresar la información en el archivo modelo con los datos solicitados.</p>
+  <p>4. Cargar el archivo modelo en el area de "Migrar Datos de Personal" y presionar el botón "Migrar datos" después de seleccionar el archivo correcto.</p>
+  <br />
+  <p>Una vez cargado el documento, se puede observar el resultado de la migración.</p>
+  <p>Nota: Es importante que los datos en los documentos cumplan con los formatos indicados para que la migración sea exitosa.</p>
+</fieldset>
+
+<div class="bold-spacing"></div>
+
+<fieldset class="sml-fieldset">
+  <legend>Enlace para descargar Archivo Modelo</legend>
+  <button type="button" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-download-alt"></span>
+    <%= link_to "Archivo Modelo", "/migracion/docente_model.xls" %>
+  </button>
+  <div></div>
+  <br/>
+</fieldset>
+
+<fieldset class="sml-fieldset">
+  <legend>Migrar Datos de Personal</legend>
+  <%= form_tag({action: :upload}, multipart: true, class: "upload-form") do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Migrar Datos", class: "btn btn-primary" %>
+  <% end %>
+  <%= render "bitacora_reciente" %>
+</fieldset>

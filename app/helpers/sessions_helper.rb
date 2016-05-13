@@ -3,6 +3,7 @@ module SessionsHelper
 	def log_in(user)
 
 		session[:user_id] = user.id
+		session[:user] = user
 
 	end
 
@@ -20,7 +21,7 @@ module SessionsHelper
 
 				log_in user
 				@current_user = user
-				
+
 			end
 		end
 	end
@@ -68,7 +69,7 @@ module SessionsHelper
 	end
 
 	def store_location
-		
+
 		session[:forwarding_url] = request.url if request.get?
 	end
 

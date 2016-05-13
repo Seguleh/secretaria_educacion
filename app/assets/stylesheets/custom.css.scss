@@ -34,10 +34,29 @@ textarea {
   color: #777;
 }
 
+.bold-spacing{
+  border-top: 10px solid #DBDBDB;
+  margin: 15px 0 20px 0;
+  color: #777;
+}
+
 .box-it{
   border: 1px solid #424242;
   text-align: center;
   padding: 15px;
+}
+
+.sml-fieldset{
+  width: 400px;
+  text-align: center;
+  margin: auto;
+}
+
+.upload-form{
+  border: 1px solid;
+  padding: 20px;
+  border-radius: 5px;
+  color: rgb(174, 173, 173);
 }
 
 * {
@@ -240,4 +259,33 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+/* tables */
+table.tablesorter-estilo {
+  font-family:arial;
+  background-color: #CDCDCD;
+  margin:10px 5px 15px 5px;
+  font-size: 0.75em;
+  width: 99%;
+  text-align: left;
+}
+table.tablesorter-estilo thead tr th, table.tablesorter tfoot tr th {
+  background-color: #7AA7C6; /* #e6EEEE; */
+  color: #FFF;
+  border: 1px solid #FFF;
+  font-size: 0.9em;
+  padding: 4px;
+}
+table.tablesorter-estilo thead tr .header {
+  background-image: url(bg.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+table.tablesorter-estilo tbody td {
+  color: #3D3D3D;
+  padding: 4px;
+  background-color: #FFF;
+  vertical-align: middle;
 }

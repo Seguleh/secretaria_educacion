@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-  	
+
   end
 
   def create
@@ -22,11 +22,11 @@ class SessionsController < ApplicationController
         flash[:warning] = message
         redirect_to root_url
       end
-  		
+
   	else
 
   		flash.now[:danger] = "Información de usuario incorrecta"
-  		render 'new'  	
+  		render 'new'
   	end
 
   end

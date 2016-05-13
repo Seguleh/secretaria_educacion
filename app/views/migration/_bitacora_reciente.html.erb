@@ -1,0 +1,29 @@
+<br/>
+<% unless session[:log_mig].nil? %>
+  <p><%= "#{session[:log_mig].length} errores en total" %></p>
+
+  <table class='tablesorter-estilo'>
+    <thead>
+      <tr>
+        <th>Fecha y Hora</th>
+        <th>Usuario</th>
+        <th>Descripción</th>
+        <th>IP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% unless session[:log_mig_per].nil? %>
+        <% session[:log_mig_per].each do |fecha,id,desc,ip| %>
+          <% unless fecha.nil? && id.nil? && desc.nil? && ip.nil? %>
+            <tr>
+              <td> <%= fecha %> </td>
+              <td> <%= id %> </td>
+              <td> <%= desc %> </td>
+              <td> <%= ip %> </td>
+            </tr>
+          <% end %>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

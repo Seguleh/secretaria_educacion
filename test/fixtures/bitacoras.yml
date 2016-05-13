@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario_cedula: MyString
+  fecha_hora: 2016-05-13 18:52:58
+  ip_origen: MyString
+  descripcion: MyString
+
+two:
+  usuario_cedula: MyString
+  fecha_hora: 2016-05-13 18:52:58
+  ip_origen: MyString
+  descripcion: MyString

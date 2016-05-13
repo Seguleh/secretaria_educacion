@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419005927) do
+ActiveRecord::Schema.define(version: 20160513185258) do
+
+  create_table "bitacoras", force: :cascade do |t|
+    t.string   "usuario_cedula", limit: 255
+    t.datetime "fecha_hora"
+    t.string   "ip_origen",      limit: 255
+    t.string   "descripcion",    limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "docentes", force: :cascade do |t|
     t.string   "nombre",           limit: 255
