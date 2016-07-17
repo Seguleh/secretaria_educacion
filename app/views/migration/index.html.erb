@@ -19,10 +19,9 @@
 
 <fieldset class="sml-fieldset">
   <legend>Enlace para descargar Archivo Modelo</legend>
-  <button type="button" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-download-alt"></span>
-    <%= link_to "Archivo Modelo", "/migration/archivo_modelo.xls" %>
-  </button>
+    <%= link_to "/migration/archivo_modelo.xls", class: "btn btn-default btn-lg" do %>
+      <span class="glyphicon glyphicon-download-alt"> </span>  Archivo Modelo
+    <% end %>
   <div></div>
   <br/>
 </fieldset>

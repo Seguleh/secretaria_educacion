@@ -35,7 +35,7 @@ textarea {
 }
 
 .bold-spacing{
-  border-top: 10px solid #DBDBDB;
+  border-top: 5px solid #DBDBDB;
   margin: 15px 0 20px 0;
   color: #777;
 }
@@ -63,6 +63,13 @@ textarea {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+}
+
+.user-dropdown {
+  background: rgb(62, 4, 4) none repeat scroll 0% 0%;
+  font-weight: bold;
+  font-size: medium;
+
 }
 
 

@@ -1,0 +1,27 @@
+<% provide(:title, "Buscador") %>
+
+<fieldset>
+  <legend>Bienvenido</legend>
+  <p>El buscador permite encontrar el personal que cumpla con los criterios especificados en los filtros a continuacion.</p>
+  <br />
+</fieldset>
+
+<fieldset class="sml-fieldset">
+  <legend>Buscar Datos de Personal</legend>
+  <%= form_tag({action: :find}, class: "upload-form") do %>
+    <%= label_tag "Profesion" %>
+    <%= select_tag :profesion, options_for_select(["Programador","Matematico","Biologo"]), prompt: "Sin Filtro" %>
+    <%= submit_tag "Buscar", class: "btn btn-primary" %>
+  <% end %>
+</fieldset>
+
+<fieldset>
+  <legend>Resultado:</legend>
+  <ul class="users">
+    <% unless @users.nil? %>
+      <% @users.each do |user| %>
+      	<p>Nombre: <%= user.nombre+" "+user.apellido %></p>
+      <% end %>
+    <% end %>
+  </ul>
+</fieldset>

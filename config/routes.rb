@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'buscador/index'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -17,6 +19,8 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'migration' => 'migration#index'
   post 'migration' => 'migration#upload'
+  get 'buscador' => 'buscador#index'
+  post 'buscador' => 'buscador#find'
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]

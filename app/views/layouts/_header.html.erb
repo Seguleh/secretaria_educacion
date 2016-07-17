@@ -6,11 +6,12 @@
         <li><%= link_to "Inicio",   root_url %></li>
         <% if logged_in? %>
         	<% if current_user.admin? && !current_user?(session[:user_id]) %>
-	        	<li><%= link_to "Registrar Usuario", signup_path %></li>
-            <li><%= link_to "Migracion de Datos", migration_path %></li>
-	        	<li><%= link_to "Usuarios", users_path %></li>
+            <li><%= link_to "Usuarios", users_path %></li>
+            <li><%= link_to "Registrar Usuario", signup_path %></li>
+            <li><%= link_to "Migracion", migration_path %></li>
+            <li><%= link_to "Buscador", buscador_path %></li>
         	<% end %>
-        	<li class="dropdown">
+        	<li class="dropdown user-dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= @current_user.apellido+", "+@current_user.nombre %> <b class="caret"></b>
             </a>
