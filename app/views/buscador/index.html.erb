@@ -10,7 +10,7 @@
   <legend>Buscar Datos de Personal</legend>
   <%= form_tag({action: :find}, class: "upload-form") do %>
     <%= label_tag "Profesion" %>
-    <%= select_tag :profesion, options_for_select(["Programador","Matematico","Biologo"]), prompt: "Sin Filtro" %>
+    <%= select_tag :profesion, options_for_select(["Programador","Matematico","Quimico"]), prompt: "Sin Filtro" %>
     <%= submit_tag "Buscar", class: "btn btn-primary" %>
   <% end %>
 </fieldset>
